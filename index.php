@@ -25,16 +25,28 @@
 <?php
 
 if(isset($_POST['acao'])){
+    
+    /*Coleta os valores digitados nos inputs*/
     $horas = $_POST['horas'];
     $minutos = $_POST['minutos'];
     $salarioHora = $_POST['salarioHora'];
     
+    /*Converte os minutos digitados no input em decimal*/
     $convertMinutes = $minutos / 60;
+
+    /*Junta as horas e os minutos convertidos*/
     $horasDia = $horas + $convertMinutes;
+
+    /*Dias trabalhados*/
     $diasTrabalhados = 25;
+
+    /*Calcula a carga horária trabalhada no mês*/
     $horaMes = $horasDia * $diasTrabalhados;
+
+    /*Realiza o calculo do salário baseado nas horas trabalhadas e seu salario por hora*/
     $salarioMes = $salarioHora * $horaMes;
 
+    /*Valida se os campos do input estão digitados corretamente*/
     if ($salarioHora == '' || $salarioHora == 0 || $horas == " " || $horas == 0 || $minutos == " "){
         echo '</br>';
         echo '<p class="center red">'.'Digite valores válidos!'.'</p>';
