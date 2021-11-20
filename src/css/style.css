@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    outline: none;
+}
+.center{
+    text-align: center;
+}
+.red{
+    color: red;
+    font-weight: bold;
+}
+.blue{
+    color: blue;
+    font-weight: bold;
+}
+.container{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container main form input{
+    padding: 10px;
+}
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
+}
+.horas{
+    width: 50px;
+}
