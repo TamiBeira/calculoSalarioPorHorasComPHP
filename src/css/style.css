@@ -4,16 +4,21 @@
     box-sizing: border-box;
 
     outline: none;
+    font-family: 'Roboto', sans-serif;
+}
+:root{
+    --vermelho: #df0000;
+    --azul: #0303cf;
 }
 .center{
     text-align: center;
 }
 .red{
-    color: red;
+    color: var(--vermelho);
     font-weight: bold;
 }
 .blue{
-    color: blue;
+    color: var(--azul);
     font-weight: bold;
 }
 .container{
@@ -22,6 +27,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.container main header{
+    padding: 20px;
+}
+.container main header h2{
+    text-align: center;
 }
 .container main form input{
     padding: 10px;
